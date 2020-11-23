@@ -1,0 +1,36 @@
+
+import random
+
+sayi=random.randrange(10,99)
+
+while(sayi%10 == sayi//10):
+    sayi=random.randrange(10,99)
+
+print(sayi)
+tahmin=0
+
+while (tahmin != sayi):
+    tahmin = int(input("10 ile 98 arasında bir sayı giriniz (10 ve 98 dahil):"))
+    if tahmin <=98 and tahmin>=10 and tahmin%10 != tahmin//10:
+        dogruyer=0
+        yanlisyer=0
+        tahmin1=str(tahmin)
+        sayi1=str(sayi)
+        if tahmin1[0] == sayi1[0]:
+            dogruyer += 1
+        if tahmin1[0] == sayi1[1]:
+            yanlisyer -=1
+        if tahmin1[1] == sayi1[1]:
+            dogruyer +=1
+        if tahmin1[1] == sayi1[0]:
+            yanlisyer -= 1
+        if dogruyer==0 and yanlisyer==0:
+            print("skorunuz = 0")
+        if dogruyer ==0 and yanlisyer!=0:
+            print("yanlis yer :",str(yanlisyer))
+        if dogruyer !=0 and yanlisyer==0:
+            print("doğru yer:",str(dogruyer))
+
+    else:
+        print("Lütfen 10 ile 98 arasında basamakları aynı olmayan bir sayı giriniz!")
+print("aferin doğru tahmin yaptın")  
