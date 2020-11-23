@@ -1,0 +1,7 @@
+def carp(i):
+    if i == 1:
+        return 1
+    else:
+        return i*(i-1)
+
+print(carp(10))
