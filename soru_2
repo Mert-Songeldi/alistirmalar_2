@@ -1,0 +1,7 @@
+def topla(i):
+    if i==1:
+        return 1
+    else:
+        return i+topla(i-1)
+
+print(topla(100))
